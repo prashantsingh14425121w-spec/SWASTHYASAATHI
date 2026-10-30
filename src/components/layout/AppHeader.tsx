@@ -20,6 +20,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { useOffline } from '../../context/OfflineContext';
 import { mockAshaProfile } from '../../data/mockData';
 import { Button } from '../ui/Button';
+import { SafeImage } from '../ui/SafeImage';
 
 export const AppHeader: React.FC = () => {
   const { currentScreen, goBack, screenHistory, navigate } = useNavigation();
@@ -206,10 +207,14 @@ export const AppHeader: React.FC = () => {
             {/* Profile Avatar / Settings Button */}
             <button
               onClick={() => navigate('settings')}
-              className="min-h-[38px] min-w-[38px] rounded-xl bg-[#E8F5EF] text-[#075C45] flex items-center justify-center font-bold text-xs border border-[#bfe3d4]"
+              className="min-h-[38px] min-w-[38px] w-9 h-9 rounded-xl overflow-hidden border border-[#bfe3d4] shrink-0 bg-[#E8F5EF]"
               title="Asha Worker Profile"
             >
-              SD
+              <SafeImage
+                src="/images/asha-worker-mother.jpg"
+                alt="Sunita Devi"
+                className="w-full h-full object-cover object-[70%_20%]"
+              />
             </button>
           </div>
         </div>

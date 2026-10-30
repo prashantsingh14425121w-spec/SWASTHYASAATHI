@@ -10,6 +10,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { Input } from '../ui/Input';
+import { SafeImage } from '../ui/SafeImage';
 import { mockAshaProfile } from '../../data/mockData';
 
 export const LoginScreen: React.FC = () => {
@@ -50,11 +51,20 @@ export const LoginScreen: React.FC = () => {
           <ShieldCheck className="w-4 h-4 text-[#087F5B]" />
           <span>Instant Evaluator Demo Access</span>
         </div>
-        <div className="space-y-1">
-          <p className="text-sm font-bold text-[#075C45]">Enter as ASHA Worker Sunita Devi</p>
-          <p className="text-xs text-[#075C45]/80">
-            Village: Rampur · Sub-Center: Chandpur · 48 Registered Families
-          </p>
+        <div className="flex items-center gap-3">
+          <div className="w-12 h-12 rounded-xl overflow-hidden border border-[#bfe3d4] shrink-0 bg-[#E8F5EF] shadow-2xs">
+            <SafeImage
+              src="/images/asha-worker-mother.jpg"
+              alt="ASHA Worker Sunita Devi"
+              className="w-full h-full object-cover object-[70%_20%]"
+            />
+          </div>
+          <div className="space-y-0.5">
+            <p className="text-sm font-bold text-[#075C45]">Enter as ASHA Worker Sunita Devi</p>
+            <p className="text-xs text-[#075C45]/80">
+              Village: Rampur · Sub-Center: Chandpur · 48 Families
+            </p>
+          </div>
         </div>
         <Button
           variant="primary"

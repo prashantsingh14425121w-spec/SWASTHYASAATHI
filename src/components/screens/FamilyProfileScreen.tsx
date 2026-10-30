@@ -24,6 +24,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
+import { SafeImage } from '../ui/SafeImage';
 import {
   mockHouseholds,
   mockMembers,
@@ -53,6 +54,13 @@ export const FamilyProfileScreen: React.FC = () => {
           <Button variant="outline" size="sm" onClick={goBack} leftIcon={<ArrowLeft className="w-4 h-4" />}>
             Back
           </Button>
+          <div className="w-12 h-12 rounded-2xl overflow-hidden border border-[#E2EAE5] shrink-0 bg-[#E8F5EF] shadow-2xs">
+            <SafeImage
+              src="/images/rural-health-visit.jpg"
+              alt={family.familyName}
+              className="w-full h-full object-cover"
+            />
+          </div>
           <div>
             <div className="flex items-center gap-2">
               <h1 className="text-xl sm:text-2xl font-bold text-[#17231E]">

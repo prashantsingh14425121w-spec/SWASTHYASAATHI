@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8F5EF" />
+      <stop offset="100%" stop-color="#d0ece0" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#mintGrad)" />
+  <g transform="translate(400, 260)" text-anchor="middle">
+    <circle cx="0" cy="0" r="48" fill="#087F5B" opacity="0.12" />
+    <path d="M-16 -8 C-16 -18 0 -22 0 -8 C0 -22 16 -18 16 -8 C16 12 0 24 0 24 C0 24 -16 12 -16 -8 Z" fill="#087F5B" transform="scale(1.4)" />
+    <text y="75" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="18" font-weight="700" fill="#075C45">SwasthyaSaathi</text>
+    <text y="100" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="500" fill="#78857E">Community Healthcare · Gram Panchayat Rampur</text>
+  </g>
+</svg>

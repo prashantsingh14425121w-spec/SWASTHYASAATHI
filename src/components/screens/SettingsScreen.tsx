@@ -21,6 +21,7 @@ import { useOffline } from '../../context/OfflineContext';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
+import { SafeImage } from '../ui/SafeImage';
 import { mockAshaProfile, mockHouseholds } from '../../data/mockData';
 
 export const SettingsScreen: React.FC = () => {
@@ -60,8 +61,12 @@ export const SettingsScreen: React.FC = () => {
       {/* 1. Worker Profile */}
       <Card variant="default" padding="lg" className="space-y-4">
         <div className="flex items-center gap-3 pb-3 border-b border-[#E2EAE5]">
-          <div className="w-12 h-12 rounded-2xl bg-[#E8F5EF] text-[#075C45] flex items-center justify-center font-bold text-base border border-[#bfe3d4]">
-            SD
+          <div className="w-14 h-14 rounded-2xl overflow-hidden border border-[#bfe3d4] shrink-0 bg-[#E8F5EF] shadow-2xs">
+            <SafeImage
+              src="/images/asha-worker-mother.jpg"
+              alt={mockAshaProfile.name}
+              className="w-full h-full object-cover object-[70%_20%]"
+            />
           </div>
           <div>
             <h3 className="text-base font-bold text-[#17231E]">{mockAshaProfile.name}</h3>

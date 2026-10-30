@@ -25,6 +25,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
+import { SafeImage } from '../ui/SafeImage';
 import {
   mockAshaProfile,
   mockHouseholds,
@@ -56,23 +57,32 @@ export const DashboardScreen: React.FC = () => {
     <div className="space-y-6 sm:space-y-8 pb-12">
       {/* 1. WELCOME BANNER & WORKER TERRITORY */}
       <div className="bg-white rounded-3xl p-5 sm:p-7 border border-[#E2EAE5] shadow-[0_2px_12px_rgba(0,0,0,0.03)] flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div className="space-y-1.5">
-          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#087F5B]">
-            <HeartPulse className="w-4 h-4" />
-            <span>Community Health Register</span>
+        <div className="flex items-center gap-4">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden border border-[#bfe3d4] shrink-0 bg-[#E8F5EF] shadow-2xs">
+            <SafeImage
+              src="/images/asha-worker-mother.jpg"
+              alt="ASHA Worker Sunita Devi"
+              className="w-full h-full object-cover object-[70%_20%]"
+            />
           </div>
-          <h1 className="text-xl sm:text-2xl font-extrabold text-[#17231E]">
-            Namaste, {mockAshaProfile.name}
-          </h1>
-          <div className="flex flex-wrap items-center gap-y-1 gap-x-3 text-xs text-[#78857E]">
-            <span className="flex items-center gap-1">
-              <MapPin className="w-3.5 h-3.5 text-[#087F5B]" />
-              {mockAshaProfile.village} ({mockAshaProfile.subCenter})
-            </span>
-            <span aria-hidden="true">·</span>
-            <span>ID: {mockAshaProfile.workerId}</span>
-            <span aria-hidden="true">·</span>
-            <span>{mockAshaProfile.district}, {mockAshaProfile.state}</span>
+          <div className="space-y-1">
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#087F5B]">
+              <HeartPulse className="w-4 h-4" />
+              <span>Community Health Register</span>
+            </div>
+            <h1 className="text-xl sm:text-2xl font-extrabold text-[#17231E]">
+              Namaste, {mockAshaProfile.name}
+            </h1>
+            <div className="flex flex-wrap items-center gap-y-1 gap-x-3 text-xs text-[#78857E]">
+              <span className="flex items-center gap-1">
+                <MapPin className="w-3.5 h-3.5 text-[#087F5B]" />
+                {mockAshaProfile.village} ({mockAshaProfile.subCenter})
+              </span>
+              <span aria-hidden="true">·</span>
+              <span>ID: {mockAshaProfile.workerId}</span>
+              <span aria-hidden="true">·</span>
+              <span>{mockAshaProfile.district}, {mockAshaProfile.state}</span>
+            </div>
           </div>
         </div>
 

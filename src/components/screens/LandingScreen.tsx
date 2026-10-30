@@ -25,6 +25,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import { Button } from '../ui/Button';
 import { Card } from '../ui/Card';
 import { Badge } from '../ui/Badge';
+import { SafeImage } from '../ui/SafeImage';
 
 export const LandingScreen: React.FC = () => {
   const { navigate } = useNavigation();
@@ -94,11 +95,10 @@ export const LandingScreen: React.FC = () => {
           {/* Right Column: Hero Visual with Real Documentary Photograph & Floating Feature Cards */}
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-3xl overflow-hidden border border-[#E2EAE5] shadow-[0_12px_40px_rgba(8,127,91,0.08)] bg-[#E8F5EF]/30 aspect-[16/10] sm:aspect-[16/10]">
-              <img
-                src="/src/assets/images/asha_worker_rural_mother_1793344192729.jpg"
+              <SafeImage
+                src="/images/asha-worker-mother.jpg"
                 alt="Indian ASHA community health worker holding tablet and counseling rural mother and child"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
 
@@ -232,11 +232,10 @@ export const LandingScreen: React.FC = () => {
           {/* Feature 1: Household Visits */}
           <div className="bg-white rounded-2xl border border-[#E2EAE5] overflow-hidden flex flex-col hover:border-[#087F5B]/30 transition-all shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
             <div className="aspect-[4/3] bg-slate-100 overflow-hidden relative">
-              <img
-                src="/src/assets/images/rural_health_visit_1793344193819.jpg"
+              <SafeImage
+                src="/images/rural-health-visit.jpg"
                 alt="Community health worker visiting rural Indian family"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
             <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
@@ -264,11 +263,10 @@ export const LandingScreen: React.FC = () => {
           {/* Feature 2: Maternal Health */}
           <div className="bg-white rounded-2xl border border-[#E2EAE5] overflow-hidden flex flex-col hover:border-[#087F5B]/30 transition-all shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
             <div className="aspect-[4/3] bg-slate-100 overflow-hidden relative">
-              <img
-                src="/src/assets/images/maternal_health_guidance_1793344194091.jpg"
+              <SafeImage
+                src="/images/maternal-health-guidance.jpg"
                 alt="ASHA worker providing prenatal maternal nutrition counseling"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
             <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
@@ -296,11 +294,10 @@ export const LandingScreen: React.FC = () => {
           {/* Feature 3: Child Vaccinations */}
           <div className="bg-white rounded-2xl border border-[#E2EAE5] overflow-hidden flex flex-col hover:border-[#087F5B]/30 transition-all shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
             <div className="aspect-[4/3] bg-slate-100 overflow-hidden relative">
-              <img
-                src="/src/assets/images/child_vaccination_session_1793344194169.jpg"
+              <SafeImage
+                src="/images/child-vaccination.jpg"
                 alt="Infant receiving routine vaccination at rural health center"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
             <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
