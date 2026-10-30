@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-forest: #087F5B;
+  --color-forest-dark: #075C45;
+  --color-forest-light: #0ca678;
+  --color-warm-ivory: #F8FAF8;
+  --color-soft-mint: #E8F5EF;
+  --color-mint-subtle: #F0F9F5;
+  --color-dark-text: #17231E;
+  --color-muted-text: #78857E;
+  --color-border-subtle: #E2EAE5;
+}
+
+:root {
+  --color-bg-canvas: #F8FAF8;
+  --color-card-bg: #FFFFFF;
+  --color-primary: #087F5B;
+  --color-primary-hover: #075C45;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-canvas);
+  color: #17231E;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for mobile / touch ergonomics */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Safe padding utilities for mobile phones with notches */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
+

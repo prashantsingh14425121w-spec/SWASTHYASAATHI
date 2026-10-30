@@ -1,0 +1,6 @@
+{
+  "name": "SwasthyaSaathi",
+  "description": "Offline-first digital health record platform for community health workers and ASHA workers in rural India. Care that goes everywhere.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
